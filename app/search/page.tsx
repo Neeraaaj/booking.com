@@ -1,4 +1,5 @@
 import { fetchResults } from "@/lib/fetchResults";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -25,9 +26,9 @@ async function SearchPage({ searchParams }: Props) {
   if (!results) return (
     <body className="bg-gray-100 dark:bg-gray-800">
       <div className="min-h-screen flex flex-col justify-center items-center">
-        <img src="https://www.svgrepo.com/show/426192/cogs-settings.svg" alt="Logo" className="mb-8 h-40" />
+        <Image src="https://www.svgrepo.com/show/426192/cogs-settings.svg" alt="Logo" className="mb-8 h-40" />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-700 dark:text-white mb-4">API Deprecated</h1>
-        <p className="text-center text-gray-500 dark:text-gray-300 text-lg md:text-xl lg:text-2xl mb-8">We're working hard to improve the user experience. Stay tuned!</p>
+        <p className="text-center text-gray-500 dark:text-gray-300 text-lg md:text-xl lg:text-2xl mb-8">We `&apos;` re working hard to improve the user experience. Stay tuned!</p>
         <div className="flex space-x-4">
           <a href="/" className="border-2 border-gray-800 text-black font-bold py-3 px-6 rounded dark:text-white dark:border-white">Reload</a>
         </div>
@@ -59,7 +60,7 @@ async function SearchPage({ searchParams }: Props) {
               key={i}
               className="flex space-y-2 justify-between space-x-4 p-5 border rounded-lg"
             >
-              <img
+              <Image
                 src={item.url}
                 alt="image of property"
                 className="h-44 w-44 rounded-lg"
