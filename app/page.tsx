@@ -1,5 +1,6 @@
 import SearchForm from "@/components/SearchForm";
 import { trending_data } from "@/data/trending";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         <div className="flex space-x-4 py-5 overflow-x-scroll">
           {trending_data.map((item) => (
             <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
-              <img
+              <Image
                 key={item.id}
                 className="w-80 h-72 object-cover rounded-lg pb-2"
                 src={item.src}
